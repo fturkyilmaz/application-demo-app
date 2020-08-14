@@ -1,0 +1,6 @@
+module Pods_SeturApp {
+  umbrella header "Pods-SeturApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
