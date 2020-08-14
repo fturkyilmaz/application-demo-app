@@ -20,6 +20,7 @@
 		6F773B3868C8BA4D0D578B40 /* libPods-SeturApp-SeturAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 715742D7AC7A2ABA2AED22A1 /* libPods-SeturApp-SeturAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9DC3EE2E9CD7FDA45F3391E5 /* libPods-SeturApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2735FEF9599708EC9831091F /* libPods-SeturApp-tvOSTests.a */; };
+		ECFD584724E6FE7D006DAFE7 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFD584624E6FE7D006DAFE7 /* BootSplash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		93094B15BBF23138472AFE1E /* Pods-SeturApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeturApp.release.xcconfig"; path = "Target Support Files/Pods-SeturApp/Pods-SeturApp.release.xcconfig"; sourceTree = "<group>"; };
 		C87AF736FBE7E2A14F89E597 /* Pods-SeturApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeturApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SeturApp-tvOS/Pods-SeturApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D2411530E2491F6D34CDA07D /* Pods-SeturApp-SeturAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeturApp-SeturAppTests.release.xcconfig"; path = "Target Support Files/Pods-SeturApp-SeturAppTests/Pods-SeturApp-SeturAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		ECFD584624E6FE7D006DAFE7 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = SeturApp/BootSplash.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FB14249D223F1AE5AC8D81B6 /* libPods-SeturApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SeturApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				ECFD584624E6FE7D006DAFE7 /* BootSplash.storyboard */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -148,7 +151,6 @@
 				17D5C42DF8ECC26C56E6FBA8 /* Pods-SeturApp-tvOSTests.debug.xcconfig */,
 				41ABB6ADA5725E0602BF7D5A /* Pods-SeturApp-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -163,6 +165,13 @@
 				2735FEF9599708EC9831091F /* libPods-SeturApp-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		389666A97D1447CFA781184D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -181,6 +190,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				241C0B4BFE5F1BAD50F61288 /* Pods */,
+				389666A97D1447CFA781184D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -340,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFD584724E6FE7D006DAFE7 /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
