@@ -1,17 +1,17 @@
-import * as React from "react";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import React from "react";
+import { useColorScheme } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Colors from "../constants/Colors";
-import TabOneScreen from "../screens/Home";
-import TabTwoScreen from "../screens/Form";
+import Home from "../screens/Home";
+import Setting from "../screens/Setting";
+import TabBarIcon from "../components/TabBarIcon";
 
 const BottomTab = createBottomTabNavigator();
 
 export default function BottomTabNavigator() {
-  // const colorScheme = useColorScheme();
-  const colorScheme = "light";
+  const colorScheme = useColorScheme();
 
   return (
     <BottomTab.Navigator
@@ -28,11 +28,11 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="Setting"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <TabBarIcon name="ios-settings" color={color} />
           ),
         }}
       />
@@ -40,34 +40,30 @@ export default function BottomTabNavigator() {
   );
 }
 
-function TabBarIcon(props) {
-  return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
-}
-
-const TabOneStack = createStackNavigator();
+const HomeStack = createStackNavigator();
 
 function TabOneNavigator() {
   return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
+    <HomeStack.Navigator>
+      <HomeStack.Screen
         name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: "Setur",  }}
+        component={Home}
+        options={{ headerTitle: "Setur" }}
       />
-    </TabOneStack.Navigator>
+    </HomeStack.Navigator>
   );
 }
 
-const TabTwoStack = createStackNavigator();
+const SettingStack = createStackNavigator();
 
 function TabTwoNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
+    <SettingStack.Navigator>
+      <SettingStack.Screen
         name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: "Tab Two Title" }}
+        component={Setting}
+        options={{ headerTitle: "Ayarlar" }}
       />
-    </TabTwoStack.Navigator>
+    </SettingStack.Navigator>
   );
 }
