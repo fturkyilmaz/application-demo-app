@@ -1,26 +1,24 @@
 import React, { useState } from "react";
 import { TextInput } from "react-native";
 import { View } from "../Themed";
-import Colors from "../../constants/Colors";
 import { useThemeColor, Text } from "../../components/Themed";
 import styles from "./styles";
 
 export default function Input({
-  label = "Mail",
-  numeric = false,
+  caption = "Mail",
   disabled = true,
   autoCapitalize = "none",
   onChangeText,
   maxLength,
-  placeholder,
-  value = "DENEME",
+  placeholder = "Mail giriniz.",
+  value = "",
   keyboardType = "email-address",
 }) {
   const placeholderColor = useThemeColor({ colorName: "placeholder" });
 
   return (
     <View>
-      {label && <Text style={styles.labelStyle}>{label}</Text>}
+      {caption && <Text style={styles.labelStyle}>{caption}</Text>}
 
       <TextInput
         placeholder={placeholder}
@@ -32,7 +30,6 @@ export default function Input({
         value={value}
         onChangeText={onChangeText}
         keyboardType={keyboardType}
-        numeric={numeric}
         autoCapitalize={autoCapitalize}
         maxLength={maxLength}
       />

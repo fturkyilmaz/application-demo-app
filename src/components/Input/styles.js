@@ -1,5 +1,7 @@
 import { StyleSheet } from "react-native";
-import Colors from "../../constants/Colors";
+import colors from "../../constants/Colors";
+import fonts from "../../constants/Fonts";
+import distances from "../../constants/Distances";
 
 export default StyleSheet.create({
   container: {
@@ -8,13 +10,13 @@ export default StyleSheet.create({
   inputStyle: {
     color: "black",
     borderWidth: 1,
-    borderRadius: 5,
-    padding: 5,
+    borderRadius: 10,
+    padding: distances.halfDistance,
     height: 45,
-    backgroundColor: Colors.white,
+    backgroundColor: colors.white,
   },
   labelStyle: {
-    color: "#515364",
-    fontSize: 15,
+    fontSize: fonts.big,
+    paddingBottom: distances.quarterDistance,
   },
 });
