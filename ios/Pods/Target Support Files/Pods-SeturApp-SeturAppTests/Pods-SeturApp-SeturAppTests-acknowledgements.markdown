@@ -1275,11 +1275,11 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-## react-native-safe-area-context
+## react-native-netinfo
 
 MIT License
 
-Copyright (c) 2019 Th3rd Wave
+Copyright (c) 2015-present, Facebook, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1300,11 +1300,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## react-native-splash-screen
+## react-native-safe-area-context
 
 MIT License
 
-Copyright (c) 2016 Jia PengHui
+Copyright (c) 2019 Th3rd Wave
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

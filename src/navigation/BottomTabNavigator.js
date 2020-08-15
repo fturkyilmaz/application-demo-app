@@ -46,9 +46,9 @@ function TabOneNavigator() {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen
-        name="TabOneScreen"
+        name="Home"
         component={Home}
-        options={{ headerTitle: "Setur" }}
+        options={{ headerTitle: "Setur", headerShown: false }}
       />
     </HomeStack.Navigator>
   );
@@ -60,7 +60,7 @@ function TabTwoNavigator() {
   return (
     <SettingStack.Navigator>
       <SettingStack.Screen
-        name="TabTwoScreen"
+        name="Setting"
         component={Setting}
         options={{ headerTitle: "Ayarlar" }}
       />

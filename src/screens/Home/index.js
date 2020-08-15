@@ -1,12 +1,30 @@
-import * as React from "react";
+import React from "react";
+import { Alert } from "react-native";
 import { View } from "../../components/Themed";
 import styles from "./styles";
 import SeturWebView from "../../components/SeturWebView";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useNetInfo } from "@react-native-community/netinfo";
 
 export default function HomeScreen({}) {
+  const insets = useSafeAreaInsets();
+  const netInfo = useNetInfo();
+
+  React.useEffect(() => {
+    console.log("Console", netInfo);
+    if (!netInfo.isConnected && netInfo.details !== null)
+      Alert.alert("Error Connection", "Open Wifi and mobile data.");
+  }, [netInfo]);
+
   return (
-    <View style={styles.container}>
-      {/* <View style={styles.border} lightColor="#709C75" darkColor="#FABAB5" /> */}
+    <View
+      style={[
+        styles.container,
+        {
+          paddingTop: Math.max(insets.top, 16),
+        },
+      ]}
+    >
       <SeturWebView />
     </View>
   );

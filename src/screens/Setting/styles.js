@@ -1,18 +1,11 @@
 import { StyleSheet } from "react-native";
+import distances from "../../constants/Distances";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#ffffff",
+    paddingHorizontal: distances.halfDistance,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+  innerContainer: { flex: 1 },
 });
