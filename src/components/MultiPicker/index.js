@@ -2,18 +2,9 @@ import React, { useState, useMemo } from "react";
 import { View, Text } from "react-native";
 import SelectMultiple from "react-native-select-multiple";
 import styles from "./styles";
+import PickerItem from "./PickerItem";
 
-const renderLabel = (label, style) => {
-  return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
-      <View style={{ marginLeft: 10 }}>
-        <Text style={style}>{label}</Text>
-      </View>
-    </View>
-  );
-};
-
-export default function MultiPicker({ items = {}, caption }) {
+export default function MultiPicker({ items = {}, caption, value = [] }) {
   const data = useMemo(
     () =>
       Object.entries(items).map(([key, value]) => ({
@@ -23,10 +14,10 @@ export default function MultiPicker({ items = {}, caption }) {
     []
   );
 
-  const [selectedFruits, setSelectedFruits] = useState([]);
+  const [selectedValues, setSelectedValues] = useState(value);
 
-  function onSelectionsChange(selectedFruits) {
-    setSelectedFruits(selectedFruits);
+  function onSelectionsChange(selectedFilter) {
+    setSelectedValues(selectedFilter);
   }
 
   return (
@@ -34,8 +25,8 @@ export default function MultiPicker({ items = {}, caption }) {
       <Text style={styles.caption}>{caption}</Text>
       <SelectMultiple
         items={data}
-        renderLabel={renderLabel}
-        selectedItems={selectedFruits}
+        renderLabel={PickerItem}
+        selectedItems={selectedValues}
         onSelectionsChange={onSelectionsChange}
       />
     </View>

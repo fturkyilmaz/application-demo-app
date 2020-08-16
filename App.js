@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
 import Navigation from "./src/navigation";
 import Icon from "react-native-vector-icons/Ionicons";
-import { NotifierWrapper } from "react-native-notifier";
+import { Provider } from "react-redux";
+import store from "./src/redux/store";
 
 export default function App() {
   useEffect(() => {
     Icon.loadFont();
   }, []);
+
   return (
-    // <NotifierWrapper>
-    <Navigation />
-    // </NotifierWrapper>
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
   );
 }

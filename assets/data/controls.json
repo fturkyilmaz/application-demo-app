@@ -4,7 +4,8 @@
     {
       "type": "input",
       "caption": "E-mail",
-      "validator": "email"
+      "validator": "email",
+      "name": "email"
     },
     {
       "type": "choice",
@@ -12,7 +13,8 @@
       "items": {
         "en": "English",
         "tr": "Turkish"
-      }
+      },
+      "name": "language"
     },
     {
       "type": "choice",
@@ -21,7 +23,8 @@
       "items": {
         "0": "Havuz",
         "1": "Spor Salonu"
-      }
+      },
+      "name": "filter"
     }
   ]
 }
