@@ -11,9 +11,9 @@ export default function HomeScreen({}) {
   const netInfo = useNetInfo();
 
   React.useEffect(() => {
-    console.log("Console", netInfo);
-    if (!netInfo.isConnected && netInfo.details !== null)
+    if (!netInfo.isConnected && netInfo.details !== null) {
       Alert.alert("Error Connection", "Open Wifi and mobile data.");
+    }
   }, [netInfo]);
 
   return (

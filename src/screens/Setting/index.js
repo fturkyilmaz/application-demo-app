@@ -1,5 +1,5 @@
 import React, { useMemo, useEffect } from "react";
-import { ScrollView, SafeAreaView, View } from "react-native";
+import { ScrollView, SafeAreaView, View, Alert } from "react-native";
 import database from "@react-native-firebase/database";
 import styles from "./styles";
 import controls from "../../../assets/data/controls.json";
@@ -12,32 +12,54 @@ import { useForm, Controller } from "react-hook-form";
 import { Text } from "../../components/Themed";
 import Button from "../../components/Button";
 import Distances from "../../constants/Distances";
+import { SETTING_COLLECTION } from "../../constants/Firebase";
+import { useNetInfo } from "@react-native-community/netinfo";
 
 export default function SettingScreen() {
   const formInput = useMemo(() => controls.controls, []);
-  const setting = useSelector((state) => state.setting.setting);
-  const dispatch = useDispatch();
-  const { control, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => {
-    console.log("BABAAA")
-    getSetting();
-  };
 
-  function getSetting() {
-    const setting = database()
-      .ref("/setting")
-      .on("value", (snapshot) => {
-        console.log("User data: ", snapshot.val());
-      });
-  }
+  const setting = useSelector((state) => state.setting.setting);
+
+  const dispatch = useDispatch();
+
+  const netInfo = useNetInfo();
+
+  const { control, handleSubmit, errors } = useForm();
 
   useEffect(() => {
-    getSetting();
+    if (netInfo.isConnected) {
+      getSetting();
+    }
   }, []);
+
+  useEffect(() => {
+    if (!netInfo.isConnected && netInfo.details !== null) {
+      Alert.alert("Error Connection", "Open Wifi and mobile data.");
+    }
+  }, [netInfo]);
+
+  function onSubmit() {
+    database()
+      .ref(SETTING_COLLECTION)
+      .set(setting)
+      .then(() => Alert.alert("Success", "Saved"))
+      .catch(() => Alert.alert("Error", "Something Went Wrong !"));
+  }
+
+  function getSetting() {
+    database()
+      .ref(SETTING_COLLECTION)
+      .on("value", (snapshot) => {
+        const item = snapshot.val() || {};
+        dispatch(addSetting(item));
+      });
+  }
 
   function changeFormInput(key, value) {
     dispatch(addSetting({ ...setting, [key]: value }));
   }
+
+  console.log("setting", setting);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -85,23 +107,21 @@ export default function SettingScreen() {
                     {...props}
                     keyProp={index}
                     value={setting[props.name]}
+                    onChange={(value) => changeFormInput(props.name, value)}
                   />
                 ) : (
                   <Picker
                     {...props}
                     keyProp={index}
                     value={setting[props.name]}
+                    onChange={(value) => changeFormInput(props.name, value)}
                   />
                 )
               )
             : null}
 
           <View style={{ flex: 1 }}>
-            <Button
-              title="Kaydet"
-              color="#f194ff"
-              onPress={handleSubmit(onSubmit)}
-            />
+            <Button title="Kaydet" onPress={onSubmit} />
           </View>
         </View>
       </ScrollView>

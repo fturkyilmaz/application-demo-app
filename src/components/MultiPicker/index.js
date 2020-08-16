@@ -4,7 +4,12 @@ import SelectMultiple from "react-native-select-multiple";
 import styles from "./styles";
 import PickerItem from "./PickerItem";
 
-export default function MultiPicker({ items = {}, caption, value = [] }) {
+export default function MultiPicker({
+  items = {},
+  caption,
+  value = [],
+  onChange,
+}) {
   const data = useMemo(
     () =>
       Object.entries(items).map(([key, value]) => ({
@@ -17,6 +22,16 @@ export default function MultiPicker({ items = {}, caption, value = [] }) {
   const [selectedValues, setSelectedValues] = useState(value);
 
   function onSelectionsChange(selectedFilter) {
+    console.log("Console.log", selectedFilter);
+
+    const dispatchData =
+      selectedFilter && selectedFilter.length > 0
+        ? selectedFilter.map((x) => x.value)
+        : [];
+
+        console.log("dispatchDatag", dispatchData);
+
+    onChange(dispatchData);
     setSelectedValues(selectedFilter);
   }
 

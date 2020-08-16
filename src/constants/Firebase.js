@@ -1,0 +1,1 @@
+export const SETTING_COLLECTION = '/setting/rZpYQDkLlnB3W2I4jEOF'

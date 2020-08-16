@@ -3,9 +3,12 @@ import { Picker } from "@react-native-community/picker";
 import { View, Text } from "../Themed";
 import styles from "./styles";
 
-export default function SelectPicker({ items = {}, caption, value }) {
-  const [selectedValue, setSelectedValue] = useState(value || null);
-
+export default function SelectPicker({
+  items = {},
+  caption,
+  value = null,
+  onChange,
+}) {
   if (Object.keys(items).length <= 0) return null;
 
   const selectPicker = Object.entries(items).map(([key, value]) => (
@@ -16,9 +19,9 @@ export default function SelectPicker({ items = {}, caption, value }) {
     <View style={styles.container}>
       <Text style={styles.caption}>{caption}</Text>
       <Picker
-        selectedValue={selectedValue}
+        selectedValue={value}
         style={styles.pickerContainer}
-        onValueChange={(itemValue) => setSelectedValue(itemValue)}
+        onValueChange={(itemValue) => onChange(itemValue)}
         itemStyle={styles.pickerItem}
       >
         {selectPicker}
