@@ -1452,6 +1452,11 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
+"@react-native-firebase/database@^7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/database/-/database-7.4.2.tgz#7fc1537327081d0a446709ff285f1d58cd01529f"
+  integrity sha512-eBQ3zmrcche19g71xKl9/W+i/uiYD6EiMzdE9iivLG0LEjw7EmuA2iBrpEMS92kB9Zi1B9PcUtwsJAlm+BV0QQ==
+
 "@react-navigation/bottom-tabs@^5.8.0":
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/@react-navigation/bottom-tabs/-/bottom-tabs-5.8.0.tgz#d7386809bceeead0adcaacf61b6563be9cefd5cb"

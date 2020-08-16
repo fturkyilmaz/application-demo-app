@@ -1,5 +1,6 @@
 import React, { useMemo, useEffect } from "react";
-import { ScrollView, SafeAreaView, View, Button } from "react-native";
+import { ScrollView, SafeAreaView, View } from "react-native";
+import database from "@react-native-firebase/database";
 import styles from "./styles";
 import controls from "../../../assets/data/controls.json";
 import Input from "../../components/Input";
@@ -9,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addSetting } from "../../redux/actions/settingActions";
 import { useForm, Controller } from "react-hook-form";
 import { Text } from "../../components/Themed";
+import Button from "../../components/Button";
 import Distances from "../../constants/Distances";
 
 export default function SettingScreen() {
@@ -16,20 +18,31 @@ export default function SettingScreen() {
   const setting = useSelector((state) => state.setting.setting);
   const dispatch = useDispatch();
   const { control, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log("BABAAA")
+    getSetting();
+  };
 
-  // useEffect(() => {
-  //    const registerList =
-  // }, [register]);
+  function getSetting() {
+    const setting = database()
+      .ref("/setting")
+      .on("value", (snapshot) => {
+        console.log("User data: ", snapshot.val());
+      });
+  }
 
-  function addFilter(key, value) {
+  useEffect(() => {
+    getSetting();
+  }, []);
+
+  function changeFormInput(key, value) {
     dispatch(addSetting({ ...setting, [key]: value }));
   }
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.innerContainer}>
-        <View style={styles.container}>
+        <View style={{ flex: 1 }}>
           {formInput && formInput.length > 0
             ? formInput.map((props, index) =>
                 props.type === "input" ? (
@@ -41,7 +54,9 @@ export default function SettingScreen() {
                           {...props}
                           keyProp={index}
                           value={setting[props.name]}
-                          onChangeText={(value) => addFilter(props.name, value)}
+                          onChangeText={(value) =>
+                            changeFormInput(props.name, value)
+                          }
                         />
                       )}
                       name={props.name}
@@ -81,11 +96,13 @@ export default function SettingScreen() {
               )
             : null}
 
-          <Button
-            title="Press me"
-            color="#f194ff"
-            onPress={handleSubmit(onSubmit)}
-          />
+          <View style={{ flex: 1 }}>
+            <Button
+              title="Kaydet"
+              color="#f194ff"
+              onPress={handleSubmit(onSubmit)}
+            />
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>

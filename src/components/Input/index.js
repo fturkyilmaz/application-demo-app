@@ -15,7 +15,6 @@ export default function Input({
   keyboardType = "email-address",
 }) {
   const placeholderColor = useThemeColor({ colorName: "placeholder" });
-  console.log("value",value)
 
   return (
     <View>

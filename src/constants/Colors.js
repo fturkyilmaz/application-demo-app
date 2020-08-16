@@ -2,6 +2,7 @@ const tintColorLight = "#ee3342";
 const tintColorDark = "#fff";
 
 export default {
+  global: { button: tintColorLight, buttonText: "#fff" },
   light: {
     text: "#000",
     background: "#fff",

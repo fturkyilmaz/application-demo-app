@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "679909869367",
+    "firebase_url": "https://setur-app-cf6ba.firebaseio.com",
+    "project_id": "setur-app-cf6ba",
+    "storage_bucket": "setur-app-cf6ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679909869367:android:cfba895ca0da07a796bcb2",
+        "android_client_info": {
+          "package_name": "com.seturapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679909869367-c78l28lejmrk217pcgei81gjnea8koi2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2jb5iN3_KWT0ZbkiwLDTXO7X_G-AuG_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679909869367-c78l28lejmrk217pcgei81gjnea8koi2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "679909869367-p2oj4qoqgj4fi39nmea7a7gb4cj4jeaa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.SeturApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
