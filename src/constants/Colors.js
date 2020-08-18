@@ -2,7 +2,11 @@ const tintColorLight = "#ee3342";
 const tintColorDark = "#fff";
 
 export default {
-  global: { button: tintColorLight, buttonText: "#fff" },
+  global: {
+    button: tintColorLight,
+    buttonText: "#fff",
+    webViewLoader: tintColorLight,
+  },
   light: {
     text: "#000",
     background: "#fff",

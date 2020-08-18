@@ -22,14 +22,12 @@ export default function MultiPicker({
   const [selectedValues, setSelectedValues] = useState(value);
 
   function onSelectionsChange(selectedFilter) {
-    console.log("Console.log", selectedFilter);
 
     const dispatchData =
       selectedFilter && selectedFilter.length > 0
         ? selectedFilter.map((x) => x.value)
         : [];
 
-        console.log("dispatchDatag", dispatchData);
 
     onChange(dispatchData);
     setSelectedValues(selectedFilter);

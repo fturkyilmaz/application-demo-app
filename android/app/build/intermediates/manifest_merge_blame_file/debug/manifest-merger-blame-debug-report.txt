@@ -1,0 +1,216 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.seturapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="29" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:3:3-65
+12-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:3:20-62
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[com.facebook.flipper:flipper:0.37.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/cb63a05a6d110c0ea8fee69e50bc353a/flipper-0.37.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.37.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/cb63a05a6d110c0ea8fee69e50bc353a/flipper-0.37.0/AndroidManifest.xml:16:22-73
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[:react-native-firebase_database] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/@react-native-firebase/database/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
+14-->[:react-native-firebase_database] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/@react-native-firebase/database/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+15-->[:react-native-firebase_database] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/@react-native-firebase/database/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
+15-->[:react-native-firebase_database] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/@react-native-firebase/database/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
+16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+16-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:26:5-82
+16-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:26:22-79
+17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+17-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:26:5-110
+17-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:26:22-107
+18
+19    <application
+19-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:5:3-17:17
+20        android:name="com.seturapp.MainApplication"
+20-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:5:16-47
+21        android:allowBackup="false"
+21-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:5:162-189
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.5.0-alpha01] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/6602b83af64da737b989b32c0848203e/core-1.5.0-alpha01/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:5:81-115
+25        android:label="@string/app_name"
+25-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:5:48-80
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:5:116-161
+27        android:testOnly="true"
+28        android:theme="@style/AppTheme"
+28-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:5:190-221
+29        android:usesCleartextTraffic="true" >
+29-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/debug/AndroidManifest.xml:7:18-53
+30        <activity
+30-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:6:5-8:16
+31            android:name="com.seturapp.MainActivity"
+31-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:6:15-43
+32            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+32-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:6:77-154
+33            android:exported="true"
+33-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:6:230-253
+34            android:label="@string/app_name"
+34-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:6:44-76
+35            android:launchMode="singleTask"
+35-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:6:155-186
+36            android:windowSoftInputMode="adjustResize" >
+36-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:6:187-229
+37        </activity>
+38        <activity
+38-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:9:5-14:16
+39            android:name="com.zoontek.rnbootsplash.RNBootSplashActivity"
+39-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:9:15-75
+40            android:launchMode="singleTask"
+40-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:9:109-140
+41            android:theme="@style/BootTheme" >
+41-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:9:76-108
+42            <intent-filter>
+42-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:10:7-13:23
+43                <action android:name="android.intent.action.MAIN" />
+43-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:11:9-61
+43-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:11:17-58
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:12:9-69
+45-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:12:19-66
+46            </intent-filter>
+47        </activity>
+48        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+48-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:16:5-82
+48-->/Users/furkanturkyilmaz/Desktop/application-demo-app/android/app/src/main/AndroidManifest.xml:16:15-79
+49
+50        <provider
+50-->[:react-native-webview] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+51            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+51-->[:react-native-webview] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+52            android:authorities="com.seturapp.fileprovider"
+52-->[:react-native-webview] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+53            android:exported="false"
+53-->[:react-native-webview] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+54            android:grantUriPermissions="true" >
+54-->[:react-native-webview] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+55            <meta-data
+55-->[:react-native-webview] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+56                android:name="android.support.FILE_PROVIDER_PATHS"
+56-->[:react-native-webview] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+57                android:resource="@xml/file_provider_paths" />
+57-->[:react-native-webview] /Users/furkanturkyilmaz/Desktop/application-demo-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+58        </provider>
+59
+60        <service
+60-->[com.google.firebase:firebase-database:19.3.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/417585107414353b74f2636f94c195ce/firebase-database-19.3.1/AndroidManifest.xml:29:9-35:19
+61            android:name="com.google.firebase.components.ComponentDiscoveryService"
+61-->[com.google.firebase:firebase-database:19.3.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/417585107414353b74f2636f94c195ce/firebase-database-19.3.1/AndroidManifest.xml:30:13-84
+62            android:directBootAware="true"
+62-->[com.google.firebase:firebase-common:19.3.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/5c6cfb4cf1a6dff1385f2f5e961b412b/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+63            android:exported="false" >
+63-->[com.google.firebase:firebase-database:19.3.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/417585107414353b74f2636f94c195ce/firebase-database-19.3.1/AndroidManifest.xml:31:13-37
+64            <meta-data
+64-->[com.google.firebase:firebase-database:19.3.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/417585107414353b74f2636f94c195ce/firebase-database-19.3.1/AndroidManifest.xml:32:13-34:85
+65                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+65-->[com.google.firebase:firebase-database:19.3.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/417585107414353b74f2636f94c195ce/firebase-database-19.3.1/AndroidManifest.xml:33:17-109
+66                android:value="com.google.firebase.components.ComponentRegistrar" />
+66-->[com.google.firebase:firebase-database:19.3.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/417585107414353b74f2636f94c195ce/firebase-database-19.3.1/AndroidManifest.xml:34:17-82
+67            <meta-data
+67-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/a3e7ba95120bf0914dfe72f5dbb32d7a/play-services-measurement-api-17.4.3/AndroidManifest.xml:30:13-32:85
+68                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+68-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/a3e7ba95120bf0914dfe72f5dbb32d7a/play-services-measurement-api-17.4.3/AndroidManifest.xml:31:17-139
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[com.google.android.gms:play-services-measurement-api:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/a3e7ba95120bf0914dfe72f5dbb32d7a/play-services-measurement-api-17.4.3/AndroidManifest.xml:32:17-82
+70            <meta-data
+70-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:32:13-34:85
+71                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+71-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:33:17-96
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:34:17-82
+73            <meta-data
+73-->[com.google.firebase:firebase-installations:16.2.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/f75c7d87fb6e97ced1842af4a031e44c/firebase-installations-16.2.1/AndroidManifest.xml:17:13-19:85
+74                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+74-->[com.google.firebase:firebase-installations:16.2.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/f75c7d87fb6e97ced1842af4a031e44c/firebase-installations-16.2.1/AndroidManifest.xml:18:17-127
+75                android:value="com.google.firebase.components.ComponentRegistrar" />
+75-->[com.google.firebase:firebase-installations:16.2.1] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/f75c7d87fb6e97ced1842af4a031e44c/firebase-installations-16.2.1/AndroidManifest.xml:19:17-82
+76        </service>
+77
+78        <receiver
+78-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:37:9-44:20
+79            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+79-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:38:13-78
+80            android:exported="true"
+80-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:39:13-36
+81            android:permission="com.google.android.c2dm.permission.SEND" >
+81-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:40:13-73
+82            <intent-filter>
+82-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:41:13-43:29
+83                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+83-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:42:17-81
+83-->[com.google.firebase:firebase-iid:20.1.5] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/8634a8b5678cd0054baca2bf6d7de6a5/firebase-iid-20.1.5/AndroidManifest.xml:42:25-78
+84            </intent-filter>
+85        </receiver>
+86
+87        <activity
+87-->[com.google.android.gms:play-services-base:17.0.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/0bda54d44a44e9fb32a457a9c0da112f/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+88-->[com.google.android.gms:play-services-base:17.0.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/0bda54d44a44e9fb32a457a9c0da112f/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+89            android:exported="false"
+89-->[com.google.android.gms:play-services-base:17.0.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/0bda54d44a44e9fb32a457a9c0da112f/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.android.gms:play-services-base:17.0.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/0bda54d44a44e9fb32a457a9c0da112f/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+91
+92        <provider
+92-->[com.google.firebase:firebase-common:19.3.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/5c6cfb4cf1a6dff1385f2f5e961b412b/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+93            android:name="com.google.firebase.provider.FirebaseInitProvider"
+93-->[com.google.firebase:firebase-common:19.3.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/5c6cfb4cf1a6dff1385f2f5e961b412b/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+94            android:authorities="com.seturapp.firebaseinitprovider"
+94-->[com.google.firebase:firebase-common:19.3.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/5c6cfb4cf1a6dff1385f2f5e961b412b/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+95            android:exported="false"
+95-->[com.google.firebase:firebase-common:19.3.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/5c6cfb4cf1a6dff1385f2f5e961b412b/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+96            android:initOrder="100" />
+96-->[com.google.firebase:firebase-common:19.3.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/5c6cfb4cf1a6dff1385f2f5e961b412b/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+97
+98        <receiver
+98-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:29:9-33:20
+99            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+99-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:30:13-85
+100            android:enabled="true"
+100-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:31:13-35
+101            android:exported="false" >
+101-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:32:13-37
+102        </receiver>
+103
+104        <service
+104-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:35:9-38:40
+105            android:name="com.google.android.gms.measurement.AppMeasurementService"
+105-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:36:13-84
+106            android:enabled="true"
+106-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:37:13-35
+107            android:exported="false" />
+107-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:38:13-37
+108        <service
+108-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:39:9-43:72
+109            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+109-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:40:13-87
+110            android:enabled="true"
+110-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:41:13-35
+111            android:exported="false"
+111-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:42:13-37
+112            android:permission="android.permission.BIND_JOB_SERVICE" />
+112-->[com.google.android.gms:play-services-measurement:17.4.3] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/c8d3afccc0cca11500af87495f85c73d/play-services-measurement-17.4.3/AndroidManifest.xml:43:13-69
+113
+114        <meta-data
+114-->[com.google.android.gms:play-services-basement:17.0.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/b21b1f2c4023b95eee82c67965ab00fa/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+115            android:name="com.google.android.gms.version"
+115-->[com.google.android.gms:play-services-basement:17.0.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/b21b1f2c4023b95eee82c67965ab00fa/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+116            android:value="@integer/google_play_services_version" />
+116-->[com.google.android.gms:play-services-basement:17.0.0] /Users/furkanturkyilmaz/.gradle/caches/transforms-2/files-2.1/b21b1f2c4023b95eee82c67965ab00fa/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+117    </application>
+118
+119</manifest>

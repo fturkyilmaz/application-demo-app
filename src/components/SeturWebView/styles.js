@@ -8,4 +8,9 @@ export default StyleSheet.create({
     width: 400,
     height: 200,
   },
+  activityIndicator: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });

@@ -59,8 +59,6 @@ export default function SettingScreen() {
     dispatch(addSetting({ ...setting, [key]: value }));
   }
 
-  console.log("setting", setting);
-
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.innerContainer}>

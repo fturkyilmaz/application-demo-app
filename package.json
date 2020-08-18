@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "upgrade": "yarn upgrade --latest",
     "pod": "npx pod-install",
+    "gradlew": "./gradlew clean build ",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
