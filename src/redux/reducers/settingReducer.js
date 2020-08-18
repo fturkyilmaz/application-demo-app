@@ -1,4 +1,4 @@
-import { FETCH_SETTING, ADD_SETTING } from "../constants";
+import { ADD_SETTING } from "../constants";
 
 const initialState = {
   setting: { language: "", email: "", filter: [] },

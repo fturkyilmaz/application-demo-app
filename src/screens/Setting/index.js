@@ -50,7 +50,7 @@ export default function SettingScreen() {
     database()
       .ref(SETTING_COLLECTION)
       .on("value", (snapshot) => {
-        const item = snapshot.val() || {};
+        const item = snapshot.val() || { language: "", email: "", filter: [] };
         dispatch(addSetting(item));
       });
   }
