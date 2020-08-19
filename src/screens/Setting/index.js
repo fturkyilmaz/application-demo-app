@@ -14,6 +14,8 @@ import {NetworkContext} from '../../context/NetworkContext';
 import Distances from '../../constants/Distances';
 import {useOnceTranslations} from '../../utils/languages';
 
+const initialValue = {language: '', email: '', filter: []};
+
 export default function SettingScreen() {
   const [buttonText] = useOnceTranslations(['screens.setting.buttonText']);
 
@@ -31,29 +33,22 @@ export default function SettingScreen() {
     }
   }, []);
 
-  function showNetworkAlert() {
-    Alert.alert('Error Connection', 'Open Wifi and mobile data.');
-  }
-
   useEffect(() => {
     if (!isConnected) {
       showNetworkAlert();
     }
   }, [isConnected]);
 
-  function onSubmit() {
-    database()
-      .ref(Config.COLLECTION_NAME)
-      .set(setting)
-      .then(() => Alert.alert('Success', 'Saved'))
-      .catch(() => Alert.alert('Error', 'Something Went Wrong !'));
+  function showNetworkAlert() {
+    Alert.alert('Error Connection', 'Open Wifi and mobile data.');
   }
 
   function getSetting() {
     database()
       .ref(Config.COLLECTION_NAME)
       .on('value', (snapshot) => {
-        const item = snapshot.val() || {language: '', email: '', filter: []};
+        const item = snapshot.val() || initialValue;
+
         dispatch(addSetting(item));
       });
   }
@@ -62,38 +57,67 @@ export default function SettingScreen() {
     dispatch(addSetting({...setting, [key]: value}));
   }
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.innerContainer}>
-        {formInput && formInput.length > 0
+  function _renderFormInput() {
+    const form = useMemo(
+      () =>
+        formInput && formInput.length > 0
           ? formInput.map((props) =>
               props.type === 'input' ? (
-                <View>
+                <View
+                  key={`textInput_${props.name}`}
+                  style={styles.inputContainer}>
                   <Input
+                    caption={props.caption}
                     keyProp={props.name}
                     value={setting[props.name]}
-                    onChangeText={(value) => changeFormInput(props.name, value)}
-                    {...props}
+                    onChange={(value) => changeFormInput(props.name, value)}
+                    // error={
+                    //   Object.keys(errors).length > 0 && errors.email
+                    //     ? errors.email
+                    //     : null
+                    // }
                   />
                 </View>
               ) : props.multiple ? (
-                <MultiPicker
-                  keyProp={props.name}
-                  value={setting[props.name]}
-                  onChange={(value) => changeFormInput(props.name, value)}
-                  {...props}
-                />
+                <View
+                  style={styles.inputContainer}
+                  key={`multiPicker_${props.name}`}>
+                  <MultiPicker
+                    keyProp={props.name}
+                    value={setting[props.name]}
+                    onChange={(value) => changeFormInput(props.name, value)}
+                    {...props}
+                  />
+                </View>
               ) : (
-                <Picker
-                  keyProp={props.name}
-                  value={setting[props.name]}
-                  onChange={(value) => changeFormInput(props.name, value)}
-                  {...props}
-                />
+                <View
+                  style={styles.inputContainer}
+                  key={`picker_${props.name}`}>
+                  <Picker
+                    keyProp={props.name}
+                    value={setting[props.name]}
+                    onChange={(value) => changeFormInput(props.name, value)}
+                    {...props}
+                  />
+                </View>
               ),
             )
-          : null}
+          : null,
+      [formInput],
+    );
+
+    return form;
+  }
+
+  function onSubmit() {}
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView
+        style={styles.innerContainer}
+        keyboardShouldPersistTaps="handled">
         <View style={{flex: 1, paddingVertical: Distances.defaultDistance}}>
+          {_renderFormInput()}
           <Button
             onPress={onSubmit}
             title={buttonText}

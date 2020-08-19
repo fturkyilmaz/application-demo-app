@@ -19,4 +19,9 @@ export default StyleSheet.create({
     fontSize: fonts.big,
     paddingBottom: distances.quarterDistance,
   },
+  error: {
+    color: colors.global.firstColor,
+    fontSize: fonts.big,
+    paddingVertical: distances.halfDistance,
+  },
 });

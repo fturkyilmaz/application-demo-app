@@ -6,6 +6,7 @@ export default {
     button: tintColorLight,
     buttonText: '#fff',
     webViewLoader: tintColorLight,
+    firstColor: tintColorLight,
   },
   light: {
     text: '#000',

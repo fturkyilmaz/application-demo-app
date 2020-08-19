@@ -5,18 +5,18 @@ import {Text} from '../../components/Themed';
 import styles from './styles';
 
 export default function Input({
-  caption = 'Mail',
-  disabled = true,
+  disabled=true,
+  caption,
   autoCapitalize = 'none',
   onChangeText,
-  maxLength,
   placeholder = 'Mail giriniz.',
   value = '',
   keyboardType = 'email-address',
+  error = null,
   props,
 }) {
   return (
-    <View {...props}>
+    <View>
       {caption && <Text style={styles.labelStyle}>{caption}</Text>}
 
       <TextInput
@@ -29,8 +29,10 @@ export default function Input({
         onChangeText={onChangeText}
         keyboardType={keyboardType}
         autoCapitalize={autoCapitalize}
-        maxLength={maxLength}
+        {...props}
       />
+
+      {error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
 }
