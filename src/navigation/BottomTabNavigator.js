@@ -6,7 +6,7 @@ import Colors from '../constants/Colors';
 import HomeScreen from '../screens/Home';
 import SettingScreen from '../screens/Setting';
 import TabBarIcon from '../components/TabBarIcon';
-import {useOnceTranslations} from '../utils/languages';
+import {useTranslation} from '../utils/languages';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -41,13 +41,15 @@ export default function BottomTabNavigator() {
 const HomeStack = createStackNavigator();
 
 function HomeNavigator() {
-  const [homeTitle] = useOnceTranslations(['navigation.home']);
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen
         name="Home"
         component={HomeScreen}
-        options={{headerTitle: homeTitle, headerShown: false}}
+        options={{
+          headerTitle: useTranslation('navigation.home'),
+          headerShown: false,
+        }}
       />
     </HomeStack.Navigator>
   );
@@ -56,13 +58,12 @@ function HomeNavigator() {
 const SettingStack = createStackNavigator();
 
 function SettingNavigator() {
-  const [settingTitle] = useOnceTranslations(['navigation.setting']);
   return (
     <SettingStack.Navigator>
       <SettingStack.Screen
         name="Setting"
         component={SettingScreen}
-        options={{headerTitle: settingTitle}}
+        options={{headerTitle: useTranslation('navigation.setting')}}
       />
     </SettingStack.Navigator>
   );

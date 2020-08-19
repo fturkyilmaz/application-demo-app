@@ -6,7 +6,7 @@ import distances from '../../constants/Distances';
 
 export default function Button({
   onPress,
-  text = 'Kaydet',
+  text,
   buttonStyle,
   textStyle,
   ...props

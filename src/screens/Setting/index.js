@@ -12,7 +12,7 @@ import Button from '../../components/Button';
 import Config from 'react-native-config';
 import {NetworkContext} from '../../context/NetworkContext';
 import Distances from '../../constants/Distances';
-import {useOnceTranslations} from '../../utils/languages';
+import {useOnceTranslations, setI18nConfig} from '../../utils/languages';
 
 const initialValue = {language: '', email: '', filter: []};
 
@@ -99,15 +99,20 @@ export default function SettingScreen() {
     return form;
   }
 
-  function onSubmit() {
+  async function onSubmit() {
     const isValidMail = emailValidation(setting.email);
 
-    if (isValidMail)
+    if (isValidMail) {
       database()
         .ref(Config.COLLECTION_NAME)
         .set(setting)
-        .then(() => Alert.alert('Success', 'Saved'))
+        .then(() => {
+          Alert.alert('Success', 'Saved');
+        })
         .catch(() => Alert.alert('Error', 'Something Went Wrong !'));
+
+      await setI18nConfig(setting.language);
+    }
   }
 
   function emailValidation(email) {
@@ -124,8 +129,8 @@ export default function SettingScreen() {
         <View style={{flex: 1, paddingVertical: Distances.defaultDistance}}>
           {_renderFormInput()}
           <Button
-            onPress={onSubmit}
-            title={buttonText}
+            onPress={async () => await onSubmit()}
+            text={buttonText}
             titleStyle={styles.buttonTitleStyle}
             buttonStyle={styles.buttonStyle}
           />
