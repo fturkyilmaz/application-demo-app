@@ -1,37 +1,35 @@
-import React from "react";
-import { useColorScheme } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
-
-import Colors from "../constants/Colors";
-import Home from "../screens/Home";
-import Setting from "../screens/Setting";
-import TabBarIcon from "../components/TabBarIcon";
+import React from 'react';
+import {useColorScheme} from 'react-native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
+import Colors from '../constants/Colors';
+import HomeScreen from '../screens/Home';
+import SettingScreen from '../screens/Setting';
+import TabBarIcon from '../components/TabBarIcon';
+import {useOnceTranslations} from '../utils/languages';
 
 const BottomTab = createBottomTabNavigator();
 
 export default function BottomTabNavigator() {
   const colorScheme = useColorScheme();
+  const activeTintColor = Colors[colorScheme].tint;
 
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
-    >
+      tabBarOptions={{activeTintColor}}>
       <BottomTab.Screen
         name="Home"
-        component={TabOneNavigator}
+        component={HomeNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-home" color={color} />
-          ),
+          tabBarIcon: ({color}) => <TabBarIcon name="ios-home" color={color} />,
         }}
       />
       <BottomTab.Screen
         name="Setting"
-        component={TabTwoNavigator}
+        component={SettingNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <TabBarIcon name="ios-settings" color={color} />
           ),
         }}
@@ -42,13 +40,14 @@ export default function BottomTabNavigator() {
 
 const HomeStack = createStackNavigator();
 
-function TabOneNavigator() {
+function HomeNavigator() {
+  const [homeTitle] = useOnceTranslations(['navigation.home']);
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen
         name="Home"
-        component={Home}
-        options={{ headerTitle: "Setur", headerShown: false }}
+        component={HomeScreen}
+        options={{headerTitle: homeTitle, headerShown: false}}
       />
     </HomeStack.Navigator>
   );
@@ -56,13 +55,14 @@ function TabOneNavigator() {
 
 const SettingStack = createStackNavigator();
 
-function TabTwoNavigator() {
+function SettingNavigator() {
+  const [settingTitle] = useOnceTranslations(['navigation.setting']);
   return (
     <SettingStack.Navigator>
       <SettingStack.Screen
         name="Setting"
-        component={Setting}
-        options={{ headerTitle: "Ayarlar" }}
+        component={SettingScreen}
+        options={{headerTitle: settingTitle}}
       />
     </SettingStack.Navigator>
   );

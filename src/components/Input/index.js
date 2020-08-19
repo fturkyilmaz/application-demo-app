@@ -1,29 +1,27 @@
-import React, { useState } from "react";
-import { TextInput } from "react-native";
-import { View } from "../Themed";
-import { useThemeColor, Text } from "../../components/Themed";
-import styles from "./styles";
+import React, {useState} from 'react';
+import {TextInput} from 'react-native';
+import {View} from '../Themed';
+import {Text} from '../../components/Themed';
+import styles from './styles';
 
 export default function Input({
-  caption = "Mail",
+  caption = 'Mail',
   disabled = true,
-  autoCapitalize = "none",
+  autoCapitalize = 'none',
   onChangeText,
   maxLength,
-  placeholder = "Mail giriniz.",
-  value = "",
-  keyboardType = "email-address",
+  placeholder = 'Mail giriniz.',
+  value = '',
+  keyboardType = 'email-address',
+  props,
 }) {
-  const placeholderColor = useThemeColor({ colorName: "placeholder" });
-
   return (
-    <View>
+    <View {...props}>
       {caption && <Text style={styles.labelStyle}>{caption}</Text>}
 
       <TextInput
         placeholder={placeholder}
         editable={disabled}
-        placeholderTextColor={placeholderColor}
         autoCorrect={false}
         style={styles.inputStyle}
         selectTextOnFocus={disabled}

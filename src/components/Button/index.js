@@ -1,18 +1,33 @@
-import React from "react";
-import { TouchableOpacity } from "react-native";
-import { View, Text } from "../Themed";
-import styles from "./styles";
+import React, {useMemo} from 'react';
+import {TouchableOpacity} from 'react-native';
+import {Text} from '../Themed';
+import colors from '../../constants/Colors';
+import distances from '../../constants/Distances';
 
-export default function Button({ onPress, text = "Kaydet" }) {
+export default function Button({
+  onPress,
+  text = 'Kaydet',
+  buttonStyle,
+  textStyle,
+  ...props
+}) {
+  const bs = useMemo(() => {
+    return {
+      alignItems: 'center',
+      borderRadius: 10,
+      backgroundColor: colors.global.button,
+      padding: distances.defaultDistance,
+      ...buttonStyle,
+    };
+  }, [buttonStyle]);
+
+  const ts = useMemo(() => {
+    return {color: colors.global.buttonText, ...textStyle};
+  }, [textStyle]);
+
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={onPress}
-        activeOpacity={0.8}
-      >
-        <Text style={styles.text}>{text}</Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity style={bs} onPress={() => onPress()} {...props}>
+      <Text style={ts}>{text}</Text>
+    </TouchableOpacity>
   );
 }

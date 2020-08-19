@@ -1,33 +1,34 @@
-import React, { useMemo } from "react";
-import { Alert } from "react-native";
-import { View } from "../../components/Themed";
-import styles from "./styles";
-import SeturWebView from "../../components/SeturWebView";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useNetInfo } from "@react-native-community/netinfo";
-import distances from "../../constants/Distances";
+import React, {useMemo, useContext, useEffect} from 'react';
+import {View} from 'react-native';
+import styles from './styles';
+import WebView from '../../components/WebView';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {Alert} from 'react-native';
+import distances from '../../constants/Distances';
+import {NetworkContext} from '../../context/NetworkContext';
 
 export default function HomeScreen({}) {
   const insets = useSafeAreaInsets();
-  const netInfo = useNetInfo();
+
+  const {isConnected} = useContext(NetworkContext);
 
   const containerStyle = useMemo(
     () => ({
       ...styles.container,
       paddingTop: Math.max(insets.top, distances.defaultDistance),
     }),
-    []
+    [],
   );
 
-  React.useEffect(() => {
-    if (!netInfo.isConnected && netInfo.details !== null) {
-      Alert.alert("Error Connection", "Open Wifi or mobile data.");
+  function showNetworkAlert() {
+    Alert.alert('Error Connection', 'Open Wifi and mobile data.');
+  }
+
+  useEffect(() => {
+    if (!isConnected) {
+      showNetworkAlert();
     }
-  }, [netInfo]);
+  }, [isConnected]);
 
-  return (
-    <View style={containerStyle}>
-      <SeturWebView />
-    </View>
-  );
+  return <View style={containerStyle}>{isConnected && <WebView />}</View>;
 }
