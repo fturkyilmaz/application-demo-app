@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Picker } from "@react-native-community/picker";
-import { View, Text } from "../Themed";
-import styles from "./styles";
+import React, {useState} from 'react';
+import {Picker} from '@react-native-community/picker';
+import {View, Text} from '../Themed';
+import styles from './styles';
 
 export default function SelectPicker({
   items = {},
@@ -22,8 +22,7 @@ export default function SelectPicker({
         selectedValue={value}
         style={styles.pickerContainer}
         onValueChange={(itemValue) => onChange(itemValue)}
-        itemStyle={styles.pickerItem}
-      >
+        itemStyle={styles.pickerItem}>
         {selectPicker}
       </Picker>
     </View>

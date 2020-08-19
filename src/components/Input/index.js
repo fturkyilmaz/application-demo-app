@@ -5,7 +5,7 @@ import {Text} from '../../components/Themed';
 import styles from './styles';
 
 export default function Input({
-  disabled=true,
+  disabled = true,
   caption,
   autoCapitalize = 'none',
   onChangeText,
@@ -24,9 +24,8 @@ export default function Input({
         editable={disabled}
         autoCorrect={false}
         style={styles.inputStyle}
-        selectTextOnFocus={disabled}
         value={value}
-        onChangeText={onChangeText}
+        onChangeText={(value) => onChangeText(value)}
         keyboardType={keyboardType}
         autoCapitalize={autoCapitalize}
         {...props}

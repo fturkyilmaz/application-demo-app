@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from "react";
-import { View, Text } from "react-native";
-import SelectMultiple from "react-native-select-multiple";
-import styles from "./styles";
-import PickerItem from "./PickerItem";
+import React, {useState, useMemo} from 'react';
+import {View, Text} from 'react-native';
+import SelectMultiple from 'react-native-select-multiple';
+import styles from './styles';
+import PickerItem from './PickerItem';
 
 export default function MultiPicker({
   items = {},
@@ -16,21 +16,16 @@ export default function MultiPicker({
         label: value,
         value: key,
       })),
-    []
+    [],
   );
 
-  const [selectedValues, setSelectedValues] = useState(value);
-
   function onSelectionsChange(selectedFilter) {
-
     const dispatchData =
       selectedFilter && selectedFilter.length > 0
         ? selectedFilter.map((x) => x.value)
         : [];
 
-
     onChange(dispatchData);
-    setSelectedValues(selectedFilter);
   }
 
   return (
@@ -39,7 +34,7 @@ export default function MultiPicker({
       <SelectMultiple
         items={data}
         renderLabel={PickerItem}
-        selectedItems={selectedValues}
+        selectedItems={value}
         onSelectionsChange={onSelectionsChange}
       />
     </View>

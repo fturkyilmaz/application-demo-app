@@ -58,58 +58,63 @@ export default function SettingScreen() {
   }
 
   function _renderFormInput() {
-    const form = useMemo(
-      () =>
-        formInput && formInput.length > 0
-          ? formInput.map((props) =>
-              props.type === 'input' ? (
-                <View
-                  key={`textInput_${props.name}`}
-                  style={styles.inputContainer}>
-                  <Input
-                    caption={props.caption}
-                    keyProp={props.name}
-                    value={setting[props.name]}
-                    onChange={(value) => changeFormInput(props.name, value)}
-                    // error={
-                    //   Object.keys(errors).length > 0 && errors.email
-                    //     ? errors.email
-                    //     : null
-                    // }
-                  />
-                </View>
-              ) : props.multiple ? (
-                <View
-                  style={styles.inputContainer}
-                  key={`multiPicker_${props.name}`}>
-                  <MultiPicker
-                    keyProp={props.name}
-                    value={setting[props.name]}
-                    onChange={(value) => changeFormInput(props.name, value)}
-                    {...props}
-                  />
-                </View>
-              ) : (
-                <View
-                  style={styles.inputContainer}
-                  key={`picker_${props.name}`}>
-                  <Picker
-                    keyProp={props.name}
-                    value={setting[props.name]}
-                    onChange={(value) => changeFormInput(props.name, value)}
-                    {...props}
-                  />
-                </View>
-              ),
-            )
-          : null,
-      [formInput],
-    );
+    const form =
+      formInput && formInput.length > 0
+        ? formInput.map((props) =>
+            props.type === 'input' ? (
+              <View
+                key={`textInput_${props.name}`}
+                style={styles.inputContainer}>
+                <Input
+                  caption={props.caption}
+                  keyProp={props.name}
+                  value={setting[props.name]}
+                  onChangeText={(value) => changeFormInput(props.name, value)}
+                />
+              </View>
+            ) : props.multiple ? (
+              <View
+                style={styles.inputContainer}
+                key={`multiPicker_${props.name}`}>
+                <MultiPicker
+                  keyProp={props.name}
+                  value={setting[props.name]}
+                  onChange={(value) => changeFormInput(props.name, value)}
+                  {...props}
+                />
+              </View>
+            ) : (
+              <View style={styles.inputContainer} key={`picker_${props.name}`}>
+                <Picker
+                  keyProp={props.name}
+                  value={setting[props.name]}
+                  onChange={(value) => changeFormInput(props.name, value)}
+                  {...props}
+                />
+              </View>
+            ),
+          )
+        : null;
 
     return form;
   }
 
-  function onSubmit() {}
+  function onSubmit() {
+    const isValidMail = emailValidation(setting.email);
+
+    if (isValidMail)
+      database()
+        .ref(Config.COLLECTION_NAME)
+        .set(setting)
+        .then(() => Alert.alert('Success', 'Saved'))
+        .catch(() => Alert.alert('Error', 'Something Went Wrong !'));
+  }
+
+  function emailValidation(email) {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    return regex.test(email);
+  }
 
   return (
     <SafeAreaView style={styles.container}>
