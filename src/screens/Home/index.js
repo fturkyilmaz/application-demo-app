@@ -1,11 +1,11 @@
 import React, {useMemo, useContext, useEffect} from 'react';
-import {View} from 'react-native';
 import styles from './styles';
 import WebView from '../../components/WebView';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Alert} from 'react-native';
 import distances from '../../constants/Distances';
 import {NetworkContext} from '../../context/NetworkContext';
+import { View } from '../../components/Themed';
 
 export default function HomeScreen({}) {
   const insets = useSafeAreaInsets();

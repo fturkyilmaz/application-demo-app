@@ -66,29 +66,29 @@ export default function SettingScreen() {
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.innerContainer}>
         {formInput && formInput.length > 0
-          ? formInput.map((props, index) =>
+          ? formInput.map((props) =>
               props.type === 'input' ? (
                 <View>
                   <Input
-                    {...props}
-                    keyProp={index}
+                    keyProp={props.name}
                     value={setting[props.name]}
                     onChangeText={(value) => changeFormInput(props.name, value)}
+                    {...props}
                   />
                 </View>
               ) : props.multiple ? (
                 <MultiPicker
-                  {...props}
-                  keyProp={index}
+                  keyProp={props.name}
                   value={setting[props.name]}
                   onChange={(value) => changeFormInput(props.name, value)}
+                  {...props}
                 />
               ) : (
                 <Picker
-                  {...props}
-                  keyProp={index}
+                  keyProp={props.name}
                   value={setting[props.name]}
                   onChange={(value) => changeFormInput(props.name, value)}
+                  {...props}
                 />
               ),
             )
