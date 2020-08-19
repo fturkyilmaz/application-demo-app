@@ -7,14 +7,14 @@ Setur için hazırlanan iş başvurusu uygulamasıdır.React native version 0.63
 1.Projeyi gitten pulladıktan sonra npm kullanılıyorsanız:
 ```
 npm install 
-npm pod -- iOS projesi için gereklidir.
-npm ios yada npm android 
+npm run pod -- iOS projesi için gereklidir.
+npm run ios yada npm run android 
 ``` 
 
 Eğer "yarn" kullanıyorsanız :
 ```
 yarn 
-yarn pod -- -- iOS projesi için gereklidir.
+yarn pod -- iOS projesi için gereklidir.
 yarn ios yada yarn android 
 ```
 
@@ -36,7 +36,6 @@ komutlarını çalıştırarak projeyi calıstırabilirsiniz.
 "i18n-js": "^3.7.1",
 "lodash.memoize": "^4.1.2",
 "react": "16.13.1",
-"react-hook-form": "^6.4.0",
 "react-native": "0.63.2",
 "react-native-bootsplash": "^2.2.5",
 "react-native-config": "^1.3.3",
