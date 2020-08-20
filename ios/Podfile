@@ -8,6 +8,7 @@ target 'SeturApp' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+
   target 'SeturAppTests' do
     inherit! :complete
     # Pods for testing

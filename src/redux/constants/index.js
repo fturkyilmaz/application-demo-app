@@ -1,0 +1,2 @@
+export const FETCH_SETTING = 'FETCH_SETTING'
+export const ADD_SETTING = 'ADD_SETTING'

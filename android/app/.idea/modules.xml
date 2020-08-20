@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1223433017/SeturApp.iml" filepath="$PROJECT_DIR$/.idea/modules/-1223433017/SeturApp.iml" group="SeturApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="SeturApp/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/148270532/react-native-bootsplash.iml" filepath="$PROJECT_DIR$/.idea/modules/148270532/react-native-bootsplash.iml" group="SeturApp/react-native-bootsplash" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/617166044/react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/617166044/react-native-community_masked-view.iml" group="SeturApp/react-native-community_masked-view" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1972504704/react-native-community_netinfo.iml" filepath="$PROJECT_DIR$/.idea/modules/1972504704/react-native-community_netinfo.iml" group="SeturApp/react-native-community_netinfo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-973564167/react-native-community_picker.iml" filepath="$PROJECT_DIR$/.idea/modules/-973564167/react-native-community_picker.iml" group="SeturApp/react-native-community_picker" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/310098206/react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/310098206/react-native-firebase_app.iml" group="SeturApp/react-native-firebase_app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1547482974/react-native-firebase_database.iml" filepath="$PROJECT_DIR$/.idea/modules/1547482974/react-native-firebase_database.iml" group="SeturApp/react-native-firebase_database" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-544206981/react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-544206981/react-native-gesture-handler.iml" group="SeturApp/react-native-gesture-handler" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/658607553/react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/658607553/react-native-reanimated.iml" group="SeturApp/react-native-reanimated" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1654469924/react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/1654469924/react-native-safe-area-context.iml" group="SeturApp/react-native-safe-area-context" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1136790980/react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-1136790980/react-native-screens.iml" group="SeturApp/react-native-screens" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-41045445/react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/-41045445/react-native-vector-icons.iml" group="SeturApp/react-native-vector-icons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1877848402/react-native-webview.iml" filepath="$PROJECT_DIR$/.idea/modules/-1877848402/react-native-webview.iml" group="SeturApp/react-native-webview" />
+    </modules>
+  </component>
+</project>

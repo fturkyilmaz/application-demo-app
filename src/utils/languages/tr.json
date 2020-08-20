@@ -1,0 +1,16 @@
+{
+  "components": {
+    "button": {}
+  },
+  "navigation": {
+    "setting": "Ayarlar",
+    "home": "Ana Sayfa"
+  },
+  "commons": {},
+  "screens": {
+    "setting": {
+      "buttonText": "Kaydet"
+    },
+    "home": {}
+  }
+}

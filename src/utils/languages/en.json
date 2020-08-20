@@ -1,0 +1,16 @@
+{
+  "components": {
+    "button": {}
+  },
+  "navigation": {
+    "setting": "Setting",
+    "home": "Home"
+  },
+  "commons": {},
+  "screens": {
+    "setting": {
+      "buttonText": "Save"
+    },
+    "home": {}
+  }
+}

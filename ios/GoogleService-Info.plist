@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>679909869367-p2oj4qoqgj4fi39nmea7a7gb4cj4jeaa.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.679909869367-p2oj4qoqgj4fi39nmea7a7gb4cj4jeaa</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0SbcxNgbdMMEm0RG_bCOrXyOzXg6rYFI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>679909869367</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.SeturApp</string>
+	<key>PROJECT_ID</key>
+	<string>setur-app-cf6ba</string>
+	<key>STORAGE_BUCKET</key>
+	<string>setur-app-cf6ba.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:679909869367:ios:125efa5a10d3a83b96bcb2</string>
+	<key>DATABASE_URL</key>
+	<string>https://setur-app-cf6ba.firebaseio.com</string>
+</dict>
+</plist>
