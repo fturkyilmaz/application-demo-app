@@ -1,6 +1,6 @@
 # Setur App
-Setur için hazırlanan iş başvurusu uygulamasıdır.React native version 0.63.2 ile geliştirme yapılmıştır.State management olarak Redux ve Context yapısı kullanılmıştır.
 
+Setur için hazırlanan iş başvurusu uygulamasıdır.React native version 0.63.2 ile geliştirme yapılmıştır.State management olarak Redux ve Context yapısı kullanılmıştır.
 
 ## Hızlı Başlangıç
 
@@ -21,7 +21,6 @@ yarn ios yada yarn android
 komutlarını çalıştırarak projeyi calıstırabilirsiniz.
 
 ## Proje dependencies
-
 ```
 "@react-native-community/async-storage": "^1.12.0",
 "@react-native-community/masked-view": "^0.1.10",
