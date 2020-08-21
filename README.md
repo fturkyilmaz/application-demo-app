@@ -2,6 +2,9 @@
 
 Setur için hazırlanan iş başvurusu uygulamasıdır.React native version 0.63.2 ile geliştirme yapılmıştır.State management olarak Redux ve Context yapısı kullanılmıştır.
 
+Uygulamanın dark mode desteği vardır.
+
+
 ## Hızlı Başlangıç
 
 1.Projeyi gitten pulladıktan sonra npm kullanılıyorsanız:
